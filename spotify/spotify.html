@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Spotify</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .top {
+            background-color: #1d75de;
+            height: 54px;
+            width: 100%;
+            position: relative;
+
+        }
+
+        .top-text1 {
+            /* background-color: red; */
+            height: 30px;
+            width: 10%;
+            position: absolute;
+            left: 103px;
+            top: 19px;
+            color: white;
+            font-size: 12px;
+        }
+
+        .top-text2 {
+            height: 30px;
+            width: 10%;
+            position: absolute;
+            right: 0px;
+            top: 14px;
+            color: white;
+            font-size: 18px;
+        }
+
+        .navbar {
+            background-color: black;
+            height: 81px;
+            width: 100%;
+            position: relative;
+        }
+
+        .logo {
+            background-image: url(logo.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 40px;
+            width: 9.5%;
+            position: absolute;
+            top: 20px;
+            left: 103px;
+        }
+
+        nav {
+            /* background-color: yellow; */
+            height: 50px;
+            width: 45%;
+            position: absolute;
+            right: 0px;
+            top: 17px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 12px;
+            color: white;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-family: calibri;
+            font-weight: 700;
+        }
+
+        .mobile {
+
+            background-image: url(https://www.scdn.co/i/free/bubbles-dktp.svg);
+            background-color:#d70b96;
+            height: 600px;
+            width: 100%;
+            position: relative;
+        }
+
+        .hero-mobile {
+            background-color: rgb(255, 255, 255);
+            width: 300px;
+            height: 500px;
+            position: relative;
+            top: 100px;
+            left: 180px;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+        }
+
+        .mobile-img {
+            background-color: yellowgreen;
+            height: 450px;
+            width: 93%;
+            position: absolute;
+            margin: 0px 10px;
+            bottom: 0px;
+            background-image: url(mobile.jpg);
+            background-size: cover;
+        }
+
+        .mobile-speaker {
+            background-color: black;
+            height: 8px;
+            width: 60px;
+            border-radius: 100px;
+            position: absolute;
+            left: 120px;
+            top: 25px;
+        }
+
+        .mobile-article {
+            position: absolute;
+            right: 230px;
+            top: 200px;
+            font-size: 70px;
+            /* font-weight: bold; */
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: white;
+            word-spacing: 10px;
+        }
+
+        .mobile-btn {
+            background-color: white;
+            padding: 10px 0px;
+            border-radius: 50px;
+            position: absolute;
+            right: 550px;
+            bottom: 75px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .mobile-btn a {
+            color: black;
+            text-decoration: none;
+            padding: 13px 20px;
+        }
+
+        .mobile-btn:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        .card {
+            /* background-color: #f81cb2; */
+            height: 550px;
+            width: 100%;
+            position: relative;
+        }
+
+        .card-heading {
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight: 800;
+            position: absolute;
+            left: 550px;
+            top: 60px;
+        }
+
+        .hero-card {
+            background-color: white;
+            height: 300px;
+            width: 250px;
+            display: inline-block;
+            position: relative;
+            top: 150px;
+            left: 98px;
+            margin: 20px;
+        }
+
+        .card-logo {
+            background-color: black;
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            border-radius: 50%;
+            left: 50px;
+        }
+
+        .hero-card h3 {
+            position: absolute;
+            bottom: 100px;
+            left: 27px;
+            font-size: 20px;
+            word-spacing: 2px;
+            font-family: sans-serif;
+            font-weight: bold;
+
+        }
+
+        .hero-card p {
+            position: absolute;
+            bottom: 0px;
+            font-size: 18px;
+            padding: 15px;
+            /* line-height: 25px; */
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .hero-card .img1 {
+            background-image: url(playbtn.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .hero-card .img2 {
+            background-image: url(playlistbtn.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .hero-card .img3 {
+            background-image: url(lovebtn.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .hero-card .img4 {
+            background-image: url(massengerbtn.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .hero-card .hero-card4 {
+            padding-left: 15px;
+        }
+
+        .hero-card .hero-card3 {
+            padding-left: 30px;
+        }
+
+        .hero-card .card3 {
+            padding-bottom: 35px;
+        }
+
+        .middle {
+            position: relative;
+            height: 500px;
+            width: 100%;
+            background-image: linear-gradient(#b023c2, #630be5);
+        }
+
+        .middle .its-free {
+            display: block;
+            text-align: center;
+            font-size: 50px;
+            position: relative;
+            top: 200px;
+            font-family: sans-serif;
+            font-weight: 900;
+            color: white;
+        }
+
+        .summary-box {
+            height: 550px;
+            width: 100%;
+            /* background-color: yellow; */
+            position: relative;
+        }
+        .summary-article{
+            height: 100%;
+            width: 80%;
+            /* background-color: pink; */
+            position: relative;
+            left: 10%;
+        }
+        .ques h2 {
+            font-family: sans-serif;
+            font-size: 38px;
+            font-weight: 800;
+            position: absolute;
+            right: 35%;
+            top: 80px;
+        }    
+        .sb-first{
+            cursor: pointer;
+            height: 80px;
+            /* background-color: red; */
+            width: 100%;
+            /* height: px; */
+            position: absolute;
+            top: 200px;
+            /* left: 10%; */
+        }
+        .sb-first:hover{
+            background-color: var(--background-elevated-highlight,#f0f0f0);   
+            text-decoration: underline;
+        }
+        .sb-heading{
+            padding-top: 10px;
+            padding-left: 20px;
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        .ready-block{
+            /* background-color: yellow; */
+            background-image: url(https://www.scdn.co/i/free/bubbles-dktp.svg);
+            background-color:#df0199;
+            height: 400px;
+            width: 100%;
+            position: relative;
+        }
+        .ready-block h2{
+            color: white;
+            font-size: 70px;
+            font-family: sans-serif;
+            font-weight: 800;
+            position: absolute;
+            top: 150px;
+            left: 350px;
+        }
+        footer
+        {
+            height: 625px;
+            width: 100%;
+            background-color: black;
+            position: relative;
+            display: inline-block;
+        }
+        .footer-card{
+            /* background-color: white; */
+            height: 346px;
+            width: 195px;
+            position: relative;
+            top: 75px;
+            left: 100px;
+            display: inline-block;
+            padding: 10px;
+        }
+        .footer-logo{
+            /* background-color:black; */
+            height: 50px;
+            width: 100%px;
+            background-image: url(logo.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .footer-card a {
+            /* background-color: red; */
+            color: white;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight:bold ;
+            line-height: 35px;
+        }
+        .ftr-card{
+            position: relative;
+            top: -150px;
+        }
+        .ftr-bottom{
+            position: relative;
+            top: -208px;
+        }
+        .cummunity{
+            position: relative;
+            top: -80px;
+        }
+        dt{
+            color: rgb(159, 148, 148);
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        .ftr-logo{
+            /* background-color: pink; */
+            height: 50px;
+            width: 50px;
+            display: inline-block;
+            border-radius: 50%;
+            margin: 2px;
+        }
+        .insta{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAHRYYDGDOhPAESjHPJcZnJoJLjKMeDgimOQacyfw&s");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .twitter{
+            background-image: url("https://cdn-icons-png.flaticon.com/512/124/124021.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .fb{
+            background-image: url("https://cdn-icons-png.flaticon.com/512/124/124010.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .footer-nav{
+            height: 30px;
+            width: 500px;
+            position: absolute;
+            bottom: 70px;
+            left: 100px;
+            font-size: 12px;
+        }
+        .footer-nav ul li{
+            display: inline-block;
+        }
+        .footer-nav ul li a{
+            text-decoration: none;
+            color: rgb(176, 165, 165);
+            font-family: sans-serif;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="top-text1">भारत (हिंदी)</div>
+        <div class="top-text2">✖</div>
+    </div>
+    <div class="navbar">
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="">Premium</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">Download</a></li>
+                <li>|</li>
+                <li><a href="">Sign up</a></li>
+                <li><a href="">Log in</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="mobile">
+        <div class="hero-mobile">
+            <div class="mobile-speaker"></div>
+            <div class="mobile-img"></div>
+        </div>
+        <article class="mobile-article">
+            Play millions of <br> songs and <br> podcasts, for free.
+        </article>
+        <div class="mobile-btn">
+            <a href="">GET SPOTIFY FREE</a>
+            <div>
+    </section>
+    <section class="card">
+        <span class="card-heading">Why Spotify?</span>
+        <div class="hero-card">
+            <div class="card-logo img1"></div>
+            <h3>Play Your Favorites</h3>
+            <p>Listen to the Songs you love, and dicover new music and podcasts.</p>
+        </div>
+        <div class="hero-card">
+            <div class="card-logo img2"></div>
+            <h3>Playlists made easy.</h3>
+            <p>We'll help you make playlists. Or enjoy playlists made by music experts.</p>
+        </div>
+        <div class="hero-card">
+            <div class="card-logo img3"></div>
+            <h3 class="hero-card3">Make it Yours.</h3>
+            <p class="card3">Tell us what you like, and we'll recommend music for you.</p>
+        </div>
+        <div class="hero-card">
+            <div class="card-logo img4"></div>
+            <h3 class="hero-card4">Save mobile data.</h3>
+            <p>To use less data when you play music, trun on Data Server in Settings.</p>
+        </div>
+    </section>
+    <section class="middle">
+        <div class="its-free">It's free</div>
+        <div class="its-free">No credit card required.</div class="its-free">
+    </section>
+    <section class="summary-box">
+        <article class="summary-article">
+            <header class="ques">
+                <h2>Got questions?</h2>
+            </header>
+            <ul>
+                <li>
+                    <details>
+                        <summary class="sb-first">
+                            <div class="sb-heading">How do I create a Playlist</div>
+                        </summary>
+                            <p>Playlists are a great way to save collections of music, either for your own listening or
+                                to share.
+                                <br>
+                                <br>
+                                TO create one:
+                                <br>
+                                <br>
+                                1.Tap Yur Library.
+                                <br>
+                                2. Tap
+                                <strong>CREATR</strong>
+                                <br>
+                                3. Give your Playlist a name.
+                                <br>
+                                4. Start adding songs (and we'll help you along).
+                            </p>
+                    </details>
+                </li>
+            </ul>
+        </article>
+    </section>
+    <section class="ready-block">
+        <h2>Ready? Let's play.</h2>
+        <div class="mobile-btn">
+            <a href="">GET SPOTIFY FREE</a>
+        <div>
+    </section>
+    <footer>
+        <div class="footer-card">
+            <div class="footer-logo"></div>
+        </div>
+        <div class="footer-card ftr-card">
+            <dl>
+                <dt>COMPANY</dt>
+                <dd class="footer-about">
+                    <a href="">About</a>
+                </dd>
+                <dd>
+                    <a href="">Jobs</a>
+                </dd>
+                <dd>
+                    <a href="">For the Record</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="footer-card ftr-card cummunity">
+            <dl>
+                <dt>COMMUNITIES</dt>
+                <dd class="footer-about">
+                    <a href="">For Artists</a>
+                </dd>
+                <dd>
+                    <a href="">Developers</a>
+                </dd>
+                <dd>
+                    <a href="">Advertising</a>
+                </dd>
+                <dd>
+                    <a href="">Investors</a>
+                </dd>
+                <dd>
+                    <a href="">Vendors</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="footer-card ftr-card">
+            <dl>
+                <dt>USEFUL LINKS</dt>
+                <dd class="footer-about">
+                    <a href="">Support</a>
+                </dd>
+                <dd>
+                    <a href="">Web Player</a>
+                </dd>
+                <dd>
+                    <a href="">Free Mobile App</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="footer-card">
+
+        </div> 
+        <div class="footer-card ftr-card ftr-bottom">
+            <div class=" ftr-logo insta"></div>
+            <div class="ftr-logo twitter"></div>
+            <div class="ftr-logo fb"></div>
+        </div>
+        <div class="footer-nav">
+            <ul>
+                 <li><a href="">Legal</a></li>
+                 <li><a href="">Privacy Center</a></li>
+                 <li><a href="">Privacy Policy</a></li>
+                 <li><a href="">Cookies</a></li>
+                 <li><a href="">About us</a></li>
+           </ul>
+        </div>
+    </footer>
+</body>
+</html>
